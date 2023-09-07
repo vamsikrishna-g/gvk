@@ -1,52 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
-  <head>
+<head>
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GVK</title>
-  </head>
+    <style>
+        /* Add some basic styling for the filter buttons */
+        .filter-buttons {
+            margin: 10px 0;
+        }
 
-  
-  <body>
+        .filter-button {
+            cursor: pointer;
+            margin-right: 10px;
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
     <header>
-    
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#publications">Publications</a></li>
-        <!-- Add more navigation links as needed -->
-      </ul>
-    </nav>
-
-      <h1>Welcome to Gunturu Vamsi Krishna's website.</h1>
-
-      
-      <div class="content" id="publications">
-        <h2>Publications</h2>
-        <p>Here are some of my recent publications:</p>
-        <ul>
-          <li><strong>Krishna, G.V.,</strong> Jothiprakash, V., and Sivakumar, B. Prediction of evapotranspiration using a nonlinear local approximation approach, May 2022. <i>EGU (Virtual)</i></li>
-          <li><strong>Krishna, G.V.,</strong> Jothiprakash, V., and Sivakumar, B. Prediction of Evapotranspiration Using Complex Networks, August 2022. <i>AOGS (Virtual)</li>
-          <li><strong>Krishna, G.V.,</strong> Jothiprakash, V., and Sivakumar, B. Behavioural study of Evapotranspiration time series: Visibility Graph Analysis, December 2022. <i>AGU (In-person)</i></li>
-          <li><strong>Krishna, G.V.,</strong> Jothiprakash, V., and Sivakumar, B. Monthly evapotranspiration trends across India using the Hurst exponent, December 2022. <i>HYDRO (In-person)</i></li>
-          <li>Ramkumar, D., and <strong>Krishna, G.V.</strong> Comprehending Architecture and Varieties of Temple Tanks in India, February 2023. <i>IKS (In-Person</i>)</li>
-          <li><strong>Krishna, G.V.,</strong> Jothiprakash, V., and Sivakumar, B. Analysis of Evapotranspiration using Complex Networks and Chaos Theory, August 2023. <i>AOGS (In-person)</i></li>
-      
-
-          <!-- Add more publications as needed -->
-        </ul>
-      </div>
-      
-    
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#publications">Publications</a></li>
+            </ul>
+        </nav>
+        <h1>Welcome to Gunturu Vamsi Krishna's website.</h1>
+        <div class="content" id="publications">
+            <h2>Publications</h2>
+            <!-- Add filter buttons for conferences and journals -->
+            <div class="filter-buttons">
+                <span class="filter-button" onclick="filterByType('all')">All</span>
+                <span class="filter-button" onclick="filterByType('conference')">Conferences</span>
+                <span class="filter-button" onclick="filterByType('journal')">Journals</span>
+            </div>
+            <p>Here are some of my recent publications:</p>
+            <ul id="publication-list">
+                <!-- Your publication list goes here -->
+            </ul>
+        </div>
     </header>
-    
-
-    
     <footer>
-      &copy; 2023 Gunturu Vamsi Krishna
+        &copy; 2023 Gunturu Vamsi Krishna
     </footer>
-
-  </body>
+    <!-- Include the external JavaScript file -->
+    <script src="publication.js"></script>
+</body>
 </html>
