@@ -73,15 +73,16 @@ function filterByType(type) {
         
         // Check if the author name is "Krishna GV" and make it bold
         const author1 = pub.author1 === "Krishna, G.V." ? `<strong>${pub.author1}</strong>` : pub.author1;
+        const author2 = pub.author2 === "Krishna, G.V." ? `<strong>${pub.author2}</strong>` : pub.author2;
 
-        listItem.innerHTML = `${author1} ${pub.author2}, ${pub.title}, <i>${pub.date}</i>`;
+
+        listItem.innerHTML = `${author1} ${author2}, ${pub.title}, <i>${pub.date}</i>`;
         publicationList.appendChild(listItem);
     });
 }
 
 // Initial display (show all publications)
 filterByType("all");
-
 
 
 
