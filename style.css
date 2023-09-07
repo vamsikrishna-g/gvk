@@ -8,6 +8,20 @@ body {
       background-color:black;
       color: #7CFC00;
 }
+/* Add CSS to center-align filter buttons */
+.filter-buttons {
+    text-align: center; /* Center-align the buttons */
+    margin: 20px 0; /* Add some margin for spacing */
+}
+
+.filter-button {
+    cursor: pointer;
+    margin: 0 10px; /* Add margin between buttons */
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+}
 
 h1 {
   color: white;
