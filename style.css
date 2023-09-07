@@ -8,7 +8,7 @@ body {
       background-color:black;
       color: #7CFC00;
 }
-/* Add CSS to center-align filter buttons */
+/* Update CSS for filter buttons */
 .filter-buttons {
     text-align: center; /* Center-align the buttons */
     margin: 20px 0; /* Add some margin for spacing */
@@ -20,8 +20,17 @@ body {
     padding: 5px 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #050505;
+    background-color: #000; /* Black background color */
+    color: #00ff00; /* Green text color */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
 }
+
+/* Hover effect: Change button background to green and text to black on hover */
+.filter-button:hover {
+    background-color: #00ff00; /* Green background color on hover */
+    color: #000; /* Black text color on hover */
+}
+
 
 h1 {
   color: white;
