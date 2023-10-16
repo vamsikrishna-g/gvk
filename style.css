@@ -36,3 +36,19 @@ h1 {
   color: white;
   margin-left: 20px;
 }
+
+
+/* For arranging the programms in grids*/
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 16px;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column; /* stack children vertically */
+    align-items: center; /* center the items */
+    text-align: center; /* center the text */
+}
