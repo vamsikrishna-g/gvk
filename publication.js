@@ -2,7 +2,8 @@
 const publications = [
     {
                 author1:"Krishna, G.V.",
-                author2:"Jothiprakash, V., Sivakumar, B.",
+                author2:"Jothiprakash, V.",
+                author3:"Sivakumar, B.",
                 title: "Prediction of evapotranspiration using a nonlinear local approximation approach",
                 date: "May 2022",
                 confname:"EGU",
@@ -10,7 +11,8 @@ const publications = [
             },
             {
                 author1:"Krishna, G.V.",
-                author2:"Jothiprakash, V., Sivakumar, B.",
+                author2:"Jothiprakash, V.",
+                author3:"Sivakumar, B.",
                 title: "Prediction of Evapotranspiration Using Complex Networks",
                 date: "August 2022",
                 confname:"AOGS",
@@ -18,7 +20,8 @@ const publications = [
             },
             {
                 author1:"Krishna, G.V.",
-                author2:"Jothiprakash, V., Sivakumar, B.",
+                author2:"Jothiprakash, V.",
+                author3:"Sivakumar, B.",
                 title: "Behavioural study of Evapotranspiration time series: Visibility Graph Analysis",
                 date: "December 2022",
                 confname:"AGU",
@@ -26,7 +29,8 @@ const publications = [
             },
             {
                 author1:"Krishna, G.V.",
-                author2:"Jothiprakash, V., Sivakumar, B.",
+                author2:"Jothiprakash, V.",
+                author3:"Sivakumar, B.",
                 title: "Monthly evapotranspiration trends across India using the Hurst exponent",
                 date: "December 2022",
                 confname:"HYDRO",
@@ -42,15 +46,17 @@ const publications = [
             },
             {
                 author1:"Krishna, G.V.",
-                author2:"Jothiprakash, V., Sivakumar, B.",
+                author2:"Jothiprakash, V.",
+                author3:"Sivakumar, B.",
                 title: "Actual Evapotranspiration in India: Trend, Persistence, and Homogeneity",
                 date: "In review",
-                confname:"",
                 type: "journal",
+                journalName: "ASCE"
             },
             {
                 author1:"Krishna, G.V.",
-                author2:"Jothiprakash, V., Sivakumar, B.",
+                author2:"Jothiprakash, V.",
+                author3:"Sivakumar, B.",
                 title: "Analysis of Evapotranspiration using Complex Networks and Chaos Theory",
                 date: "August 2023",
                 confname:"AOGS",
@@ -58,40 +64,47 @@ const publications = [
             },
             {
                 author1:"Krishna, G.V.",
-                author2:"Jothiprakash, V., Sivakumar, B.",
+                author2:"Jothiprakash, V.",
+                author3:"Sivakumar, B.",
                 title: "Dynamic Behaviour of Daily Evapotranspiration Time Series: Use of Visibility Graphs",
                 date: "In review",
-                confname:"",
                 type: "journal",
+                journalName: "COMPAG"
+                
             },
     // More publication data entries...
 ];
 
-// Function to display publications based on type (conference or journal)
+
 function filterByType(type) {
     const publicationList = document.getElementById("publication-list");
     publicationList.innerHTML = ""; // Clear the current list
 
-    // Filter publications based on the selected type
     const filteredPublications = type === "all" ? publications : publications.filter(pub => pub.type === type);
 
-    // Create and append list items for filtered publications
     filteredPublications.forEach(pub => {
         const listItem = document.createElement("li");
         
-        // Check if the author name is "Krishna GV" and make it bold
-        const author1 = pub.author1 === "Krishna, G.V." ? `<strong>${pub.author1}</strong>` : pub.author1;
-        const author2 = pub.author2 === "Krishna, G.V." ? `<strong>${pub.author2}</strong>` : pub.author2;
+        // Format authors
+        let authors = pub.author1;
+        if (pub.author2) authors += `, ${pub.author2}`;
+        if (pub.author3) authors += `, ${pub.author3}`;
 
+        // Make the name "Krishna, G.V." bold if present
+        authors = authors.replace("Krishna, G.V.", "<strong>Krishna, G.V.</strong>");
 
-        listItem.innerHTML = `${author1} ${author2}, ${pub.title}, ${pub.confname}, <i>${pub.date}</i>`;
+        // Format the citation
+        let citation = "";
+        if (pub.type === "journal") {
+            citation = `${authors} (${pub.date}). ${pub.title}. <i>${pub.journalName}</i>.`;
+        } else {
+            citation = `${authors} (${pub.date}, ${pub.confname}). ${pub.title}.`;
+        }
+
+        listItem.innerHTML = citation;
         publicationList.appendChild(listItem);
     });
 }
 
 // Initial display (show all publications)
 filterByType("all");
-
-
-
-
