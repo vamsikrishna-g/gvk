@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Prevents scroll bars during animation */
+}
+
+.container {
+    width: 100%; /* Use 100% width for the home page */
+    text-align: center;
+    transition: transform 2s ease-in-out, top 2s ease-in-out; /* Smooth transition */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.moved {
+    top: 0;
+    transform: translate(-50%, 0);
+}
+
+
+/* Update CSS for filter buttons */
+.filter-buttons {
+    text-align: center; /* Center-align the buttons */
+    margin: 20px 0; /* Add some margin for spacing */
+}
+
+.filter-button {
+    cursor: pointer;
+    margin: 0 10px; /* Add margin between buttons */
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #000; /* Black background color */
+    color: #00ff00; /* Green text color */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+/* Hover effect: Change button background to green and text to black on hover */
+.filter-button:hover {
+    background-color: #00ff00; /* Green background color on hover */
+    color: #000; /* Black text color on hover */
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #ffffff;
+}
+nav a:hover {
+    text-decoration: underline;
+    color: #00ff00;
+}
+
+#typing {
+    color: #7CFC00; /* Sets the color of the dynamic text */
+}
