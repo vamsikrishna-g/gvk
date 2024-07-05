@@ -1,59 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
 <head>
-    <link rel="stylesheet" href="style.css">
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GVK</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/stars.css" />
+    <link rel="stylesheet" type="text/css" href="css/education.css" />
+
+</head>
+
+
+
+<body>
+
+    <!-- Stars background element -->
+    <div class="stars"></div>
+    <!-- Twinkling background element -->
+    <div class="twinkling"></div>
+
+
 
     
-</head>
-<body>
+    <div class="container" id="container">
     <header>
-        <h1>Welcome to Gunturu Vamsi Krishna's website.</h1>
-        <div class="content" id="publications">
-            <h2>Publications</h2>
-            <!-- Add filter buttons for conferences and journals -->
+        <h1>Welcome to </span><span id="typing"></span><span> Website!</span></h1>
+        <nav>
+                <a href="#home" onclick="moveToTop(event, 'home')">Home</a>
+                <a href="#about" onclick="moveToTop(event, 'about')">About me</a>
+                <a href="#pubs" onclick="moveToTop(event, 'pubs')">Publications</a>
+        </nav>
+    </header>
+
+
+
+
+
+
+
+
+
+
+    <main>
+        
+        
+        
+
+
+        
+        <section id="about">
+            <h2 style="text-align: left;">About me</h2>
+            <!-- Content for the about section -->
+            <p style="text-align: left;">My educational background</p>
+
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css" rel="stylesheet" />
+                <div class="timeline" style="--items: 5;">
+                <h1>Education</h1>
+                <ul>
+                    <li style="--index: 1">
+                    <h3>2009</h3>
+                    <p>Schooling</p>
+                    </li>
+                    <li style="--index: 2">
+                    <h3>2011 July</h3>
+                    <p>Intermediate education, Narayana College</p>
+                    </li>
+                    <li style="--index: 3">
+                    <h3>2015 August</h3>
+                    <p>
+                        Bachelor's in Civil Engineering, Vikrama Simhapuri University
+                    </p>
+                    </li>
+                    <li style="--index: 4">
+                    <h3>2018 July</h3>
+                    <p>
+                        Master's in Remote Sensing and Geographic Information Systems, National Institute of Technology, Karnataka
+                    </p>
+                    </li>
+                    <li style="--index: 5">
+                    <h3>2025 January</h3>
+                    <p>
+                        PhD in Civil Engineering, Indian Institute of Technology, Bombay
+                    </p>
+                    </li>
+                </ul>
+                </div>
+        </section>
+        
+
+
+        
+        <section id="pubs">
+            <h2 style="text-align: left;">List of Publications</h2>
+            <!-- Content for the services section -->
+            <!--p>Some of my recent publications:</p-->
             <div class="filter-buttons">
                 <span class="filter-button" onclick="filterByType('all')">All</span>
                 <span class="filter-button" onclick="filterByType('journal')">Journals</span>
                 <span class="filter-button" onclick="filterByType('conference')">Conferences</span>
             </div>
-            <p>Here are some of my recent publications:</p>
             <ul id="publication-list">
                 <!-- Your publication list goes here -->
             </ul>
-        </div>
-    </header>
+        
+        </section>
+    </main>
 
-    
-<!-- Adding Skills Section -->
-<section class="content" id="skills">
-    <h2>Skills</h2>
-    
-    <div class="skills-grid">
-        <div class="skill-item">
-            <img src="icons/Rlogo.png" alt="R Icon" width="80" height="80">
-            <!--<span>R</span> -->
-        </div>
-        <div class="skill-item">
-            <img src="icons/ENVI_IDE.png" alt="ENVI IDE Icon" width="120" height="120">
-            <!--<span>IDE (ENVI)</span> -->
-        </div>
-        <!-- Add more skills here -->
-        <div class="skill-item">
-            <img src="icons/matlab.png" alt="Matlab Icon" width="50" height="50">
-            <!--<span>MATLAB</span> -->
-        </div>
-        <!-- ... and so on -->
-        <div class="skill-item">
-            <img src="icons/qgis_logo.png" alt="QGIS Icon" width="100" height="80">
-            <!--<span>QGIS</span> -->
-        </div>
+
+
+
+
+
+
+
+
     </div>
-</section>
 
-    <!-- Include the external JavaScript file -->
-    <script src="publication.js"></script>
+    <script src="js_files/content.js"></script> <!-- Link to the JavaScript file -->
+
+    <script src="js_files/publication.js"></script> <!-- Link to the JavaScript file -->
+
+    
+
 </body>
+
+
 </html>
